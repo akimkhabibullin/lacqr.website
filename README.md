@@ -9,6 +9,11 @@ This is a dependency-free static website intended for Lacqr's public legal and s
 - `/terms/` — public Terms of Use
 - `/support/` — App Store support URL and contact information
 - `/delete-account/` — account-deletion instructions
+- `/privacy-choices/` — App Store privacy-choices/data-rights URL
+- `/upload-rules/` — user-facing content rules
+- `/copyright/` — copyright reporting and counter-notice process
+- `/security/` — public security and responsible-reporting page
+- `/legal/` — legal and policy index
 
 ## Local preview
 
@@ -44,6 +49,11 @@ The verified production address is `https://lacqr-website.vercel.app`. Public re
 - `https://lacqr-website.vercel.app/support/`
 - `https://lacqr-website.vercel.app/terms/`
 - `https://lacqr-website.vercel.app/delete-account/`
+- `https://lacqr-website.vercel.app/privacy-choices/`
+- `https://lacqr-website.vercel.app/upload-rules/`
+- `https://lacqr-website.vercel.app/copyright/`
+- `https://lacqr-website.vercel.app/security/`
+- `https://lacqr-website.vercel.app/legal/`
 
 Do not enter a guessed URL in App Store Connect. Open every final URL in a private browser window and verify that it returns the intended page over HTTPS.
 

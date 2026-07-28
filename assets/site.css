@@ -76,6 +76,13 @@ h1 { max-width: 820px; margin: 0; font-size: clamp(46px, 7.5vw, 84px); line-heig
 .footer-inner { width: min(calc(100% - 40px), var(--max)); margin: 0 auto; padding: 34px 0 42px; display: flex; justify-content: space-between; gap: 24px; color: var(--muted); font-size: 12px; }
 .footer-links { display: flex; flex-wrap: wrap; gap: 10px 20px; }
 .footer-links a { color: var(--muted); }
+.legal-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border: 1px solid var(--line); background: var(--line); gap: 1px; margin-top: 36px; }
+.legal-link-card { display: block; min-height: 150px; padding: 26px; background: var(--paper); color: var(--ink); text-decoration: none; }
+.legal-link-card:hover { background: var(--soft); }
+.legal-link-card strong { display: block; margin-bottom: 9px; font-size: 17px; }
+.legal-link-card span { display: block; color: var(--muted); font-size: 14px; }
+.notice { margin: 24px 0; padding: 18px 20px; border: 1px solid var(--line); background: var(--soft); color: #54494e; }
+.document code { padding: 2px 5px; background: var(--soft); border: 1px solid var(--line); border-radius: 4px; font-size: .9em; }
 
 @media (max-width: 760px) {
   .nav { min-height: auto; padding: 14px 0; align-items: flex-start; }
@@ -90,6 +97,18 @@ h1 { max-width: 820px; margin: 0; font-size: clamp(46px, 7.5vw, 84px); line-heig
   .document-nav { position: static; padding-bottom: 24px; border-bottom: 1px solid var(--line); columns: 2; }
   .document-nav strong { column-span: all; }
   .footer-inner { flex-direction: column; }
+  .legal-grid { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+@media print {
+  :root { --ink: #000; --muted: #333; --line: #ccc; }
+  .site-header, .site-footer, .document-nav, .skip-link { display: none !important; }
+  .document-wrap { display: block; width: 100%; padding: 0; }
+  .document { max-width: none; }
+  .document h1 { font-size: 34pt; }
+  .document section { break-inside: avoid; }
+  a { color: #000; text-decoration: none; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; }
+}
