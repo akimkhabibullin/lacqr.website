@@ -47,11 +47,11 @@ The verified production address is `https://lacqr-website.vercel.app`. Public re
 
 Do not enter a guessed URL in App Store Connect. Open every final URL in a private browser window and verify that it returns the intended page over HTTPS.
 
-The support email is still `hello@lacqr.app`. That address will not work until the domain and email service exist. Before App Store submission, either activate it or replace it everywhere with a real monitored address that does not expose an unwanted personal address.
+The support, privacy, and security contact is `lacqr.app@gmail.com`. Keep the mailbox monitored, protect it with two-step verification, and update every public and in-app reference together if it changes.
 
 ## Before publishing
 
-- Verify that `hello@lacqr.app` receives mail.
+- Verify that `lacqr.app@gmail.com` receives mail and that replies are monitored.
 - Have qualified counsel review the legal operator identity, governing law, age requirements, retention statement, and territory-specific terms.
 - Remove the visible legal-review callout from `terms/index.html` only after that review is complete.
 - Confirm that the public policy still exactly matches the production app and Supabase behavior.
