@@ -36,14 +36,14 @@ Every push to the production branch will create a new production deployment. Oth
 
 Vercel Hobby is currently $0 but is limited by Vercel's terms to personal and non-commercial use. If Lacqr becomes commercial or exceeds Hobby limits, move this dependency-free site to another static host or upgrade intentionally. Hobby projects are paused rather than automatically billed when included usage is exhausted.
 
-## After the first deployment
+## Production deployment
 
-Send the exact production `https://…vercel.app` address back to Codex. It must then replace the unreleased `lacqr.app` values in the app, About screen, App Store readiness document, and public-link references. The deployed privacy and support URLs should look like:
+The verified production address is `https://lacqr-website.vercel.app`. Public release URLs are:
 
-- `https://YOUR-ACTUAL-PROJECT.vercel.app/privacy/`
-- `https://YOUR-ACTUAL-PROJECT.vercel.app/support/`
-- `https://YOUR-ACTUAL-PROJECT.vercel.app/terms/`
-- `https://YOUR-ACTUAL-PROJECT.vercel.app/delete-account/`
+- `https://lacqr-website.vercel.app/privacy/`
+- `https://lacqr-website.vercel.app/support/`
+- `https://lacqr-website.vercel.app/terms/`
+- `https://lacqr-website.vercel.app/delete-account/`
 
 Do not enter a guessed URL in App Store Connect. Open every final URL in a private browser window and verify that it returns the intended page over HTTPS.
 
@@ -56,7 +56,7 @@ The support email is still `hello@lacqr.app`. That address will not work until t
 - Remove the visible legal-review callout from `terms/index.html` only after that review is complete.
 - Confirm that the public policy still exactly matches the production app and Supabase behavior.
 - Test every link over HTTPS without being signed in.
-- Enter the final Vercel `/privacy/` address as the App Store privacy-policy URL.
-- Enter the final Vercel `/support/` address as the App Store support URL.
+- Enter `https://lacqr-website.vercel.app/privacy/` as the App Store privacy-policy URL.
+- Enter `https://lacqr-website.vercel.app/support/` as the App Store support URL.
 
 Whenever Lacqr's data practices change, update the app policy, this website, the iOS privacy manifest, and App Store Connect disclosures together.
