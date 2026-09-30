@@ -4,16 +4,15 @@ This is a dependency-free static website intended for Lacqr's public legal and s
 
 ## Pages
 
-- `/` — public landing page
-- `/privacy/` — App Store privacy-policy URL
-- `/terms/` — public Terms of Use
-- `/support/` — App Store support URL and contact information
-- `/delete-account/` — account-deletion instructions
-- `/privacy-choices/` — App Store privacy-choices/data-rights URL
-- `/upload-rules/` — user-facing content rules
-- `/copyright/` — copyright reporting and counter-notice process
-- `/security/` — public security and responsible-reporting page
-- `/legal/` — legal and policy index
+- `/` — landing page
+- `/privacy/` — App Store privacy-policy URL (generated)
+- `/terms/` — Terms of Use (generated)
+- `/support/` — App Store support URL
+- `/legal/` — legal index
+
+`privacy/` and `terms/` are generated from `src/laqr/legal.ts` so the app and the
+site never disagree. After editing `legal.ts`, run `npm run build:legal` and
+redeploy.
 
 ## Local preview
 
@@ -43,30 +42,15 @@ Vercel Hobby is currently $0 but is limited by Vercel's terms to personal and no
 
 ## Production deployment
 
-The verified production address is `https://lacqr-website.vercel.app`. Public release URLs are:
+The production address is `https://lacqr-website.vercel.app`. Enter
+`/privacy/` as the App Store privacy-policy URL and `/support/` as the support
+URL. Open each in a private browser window to confirm before submitting.
 
-- `https://lacqr-website.vercel.app/privacy/`
-- `https://lacqr-website.vercel.app/support/`
-- `https://lacqr-website.vercel.app/terms/`
-- `https://lacqr-website.vercel.app/delete-account/`
-- `https://lacqr-website.vercel.app/privacy-choices/`
-- `https://lacqr-website.vercel.app/upload-rules/`
-- `https://lacqr-website.vercel.app/copyright/`
-- `https://lacqr-website.vercel.app/security/`
-- `https://lacqr-website.vercel.app/legal/`
-
-Do not enter a guessed URL in App Store Connect. Open every final URL in a private browser window and verify that it returns the intended page over HTTPS.
-
-The support, privacy, and security contact is `lacqr.app@gmail.com`. Keep the mailbox monitored, protect it with two-step verification, and update every public and in-app reference together if it changes.
+Keep `lacqr.app@gmail.com` monitored; it's the only contact listed.
 
 ## Before publishing
 
-- Verify that `lacqr.app@gmail.com` receives mail and that replies are monitored.
-- Have qualified counsel review the legal operator identity, governing law, age requirements, retention statement, and territory-specific terms.
-- Remove the visible legal-review callout from `terms/index.html` only after that review is complete.
-- Confirm that the public policy still exactly matches the production app and Supabase behavior.
-- Test every link over HTTPS without being signed in.
-- Enter `https://lacqr-website.vercel.app/privacy/` as the App Store privacy-policy URL.
-- Enter `https://lacqr-website.vercel.app/support/` as the App Store support URL.
-
-Whenever Lacqr's data practices change, update the app policy, this website, the iOS privacy manifest, and App Store Connect disclosures together.
+- Have the privacy policy and terms reviewed by someone qualified.
+- Whenever Lacqr's data practices change, update `src/laqr/legal.ts`, rebuild
+  these pages, the iOS privacy manifest in `app.json`, and the App Store
+  Connect privacy answers together.
